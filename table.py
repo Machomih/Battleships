@@ -103,7 +103,6 @@ class Table:
                     self.start_y / 4 + self.cell_size <= mouse_y <= self.bottom()):
                 grid_y = int((mouse_x - self.start_x) // self.cell_size)
                 grid_x = int((mouse_y - self.start_y) // self.cell_size)
-                print((grid_x, grid_y) in self.clicked_cells)
                 if any((grid_x, grid_y) == (x, y) for x, y, v in self.clicked_cells):
                     return "Already clicked"
 
